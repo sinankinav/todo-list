@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yapılacaklar Listesi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="columns-container">
+        <div id="todo" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>To Do</h2>
+        </div>
+        <div id="in-progress" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>In Progress</h2>
+        </div>
+        <div id="done" class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h2>Done</h2>
+        </div>
+    </div>
+
+    <form id="new-task-form">
+        <h3>Add New Task</h3>
+        <label for="title">Header:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required>
+        <label for="assignee">Assignee:</label>
+        <input type="text" id="assignee" name="assignee" required>
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="To Do">To Do</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Done">Done</option>
+        </select>
+        <button type="submit">Add</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
